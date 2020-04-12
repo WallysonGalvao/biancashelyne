@@ -8,6 +8,6 @@ export default function Background({ image, children }) {
 }
 
 Background.propTypes = {
-  children: PropTypes.element.isRequired,
-  image: PropTypes.element.isRequired,
+  children: PropTypes.arrayOf(PropTypes.element).isRequired,
+  image: PropTypes.string.isRequired,
 };

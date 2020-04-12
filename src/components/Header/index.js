@@ -11,10 +11,10 @@ const menus = [
     path: '/schedule',
     title: 'Agenda',
   },
-  /* {
+  {
     path: '/videos',
     title: 'Vídeos',
-  }, */
+  },
   {
     path: '/contact',
     title: 'Contato',
@@ -28,7 +28,7 @@ export default function Header() {
         <Box>
           <List>
             {menus.map(({ path, title }) => (
-              <li>
+              <li key={path}>
                 <NavLink exact to={path}>
                   {title}
                 </NavLink>

@@ -11,7 +11,7 @@ import Input from '~/components/Input';
 
 import history from '~/services/history';
 
-import image from '../../assets/violao3.jpg';
+import image from '../../assets/violao.jpg';
 
 import { FormContent, Title, Social, Footer } from './styles';
 
