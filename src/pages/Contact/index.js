@@ -1,0 +1,114 @@
+import React, { useRef } from 'react';
+import { FiFacebook, FiInstagram, FiYoutube } from 'react-icons/fi';
+import { toast } from 'react-toastify';
+import { Form } from '@unform/web';
+import * as Yup from 'yup';
+
+import Background from '~/components/Background';
+import Header from '~/components/Header';
+import Content from '~/components/Content';
+import Input from '~/components/Input';
+
+import history from '~/services/history';
+
+import image from '../../assets/violao3.jpg';
+
+import { FormContent, Title, Social, Footer } from './styles';
+
+export default function Contact() {
+  const formRef = useRef(null);
+
+  async function handleSubmit(data) {
+    try {
+      const schema = Yup.object().shape({
+        name: Yup.string().required('Campo obrigatório'),
+        email: Yup.string().required('Campo obrigatório'),
+        message: Yup.string().required('Campo obrigatório'),
+      });
+      await schema.validate(data, {
+        abortEarly: false,
+      });
+      await toast.success('Mensagem enviada com sucesso!');
+      formRef.current.setErrors({});
+      history.push('/deliveryman');
+    } catch (err) {
+      if (err instanceof Yup.ValidationError) {
+        const errorMessages = {};
+
+        err.inner.forEach(error => {
+          errorMessages[error.path] = error.message;
+          toast.error(error.message);
+        });
+
+        formRef.current.setErrors(errorMessages);
+      } else {
+        toast.error('Algo deu errado!');
+      }
+    }
+  }
+
+  return (
+    <Background image={image}>
+      <Header />
+      <Content>
+        <FormContent>
+          <Title>ENTRE EM CONTATO</Title>
+
+          <Form ref={formRef} onSubmit={handleSubmit}>
+            <Input name="name" label="Nome" />
+            <Input name="email" label="E-mail" type="email" />
+            <Input
+              name="message"
+              label="Mensagem"
+              multiline
+              rows="4"
+              cols="50"
+            />
+            <button type="submit">ENVIAR</button>
+          </Form>
+        </FormContent>
+        <Social>
+          <Title>ME ACOMPANHE NAS REDES SOCIAIS</Title>
+
+          <div>
+            <a
+              href="https://www.instagram.com/biancashelyne/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FiInstagram size={50} />
+              <span>Instagram</span>
+            </a>
+
+            <a
+              href="https://www.youtube.com/channel/UCXRExMtOE-chWT0a_ILU4lQ"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FiYoutube size={50} />
+              <span>Youtube</span>
+            </a>
+
+            <a
+              href="https://www.facebook.com/bianca.shelyne"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FiFacebook size={50} />
+              <span>Facebbok</span>
+            </a>
+          </div>
+        </Social>
+      </Content>
+      <Footer>
+        <a
+          href="https://linkedin.com/in/wallyson-galvao"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Copyright © 2020 Desenvolvido por Wallyson Galvão
+        </a>
+      </Footer>
+    </Background>
+  );
+}
