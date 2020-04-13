@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import { colors } from '~/styles/colors';
+
 export const Content = styled.div`
   z-index: 2;
   display: flex;
@@ -13,7 +15,7 @@ export const Content = styled.div`
   border-radius: 4px;
 
   &:hover {
-    box-shadow: inset 0 -1px 0 #e4bb23;
+    box-shadow: inset 0 -1px 0 ${colors.secondary};
   }
 `;
 
@@ -28,7 +30,7 @@ export const Date = styled.div`
   .date {
     font-size: 25px;
     font-weight: bold;
-    color: #e4bb23;
+    color: ${colors.secondary};
   }
 `;
 
@@ -49,9 +51,9 @@ export const Info = styled.div`
     align-items: center;
 
     a {
-      color: #fff;
+      color: ${colors.primary};
       &:hover {
-        color: #e4bb23;
+        color: ${colors.secondary};
       }
     }
   }

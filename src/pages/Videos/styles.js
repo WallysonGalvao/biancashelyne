@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import { colors } from '~/styles/colors';
+
 export const Box = styled.div`
   width: 100%;
 
@@ -7,7 +9,7 @@ export const Box = styled.div`
   flex-direction: column;
 
   h1 {
-    color: #fff;
+    color: ${colors.primary};
     font-size: 25px;
     margin-bottom: 15px;
   }
@@ -19,7 +21,6 @@ export const Box = styled.div`
 `;
 
 export const InfoContainer = styled.div`
-  /* width: 640px; */
   display: flex;
   flex-direction: row;
   margin-top: 15px;
@@ -30,18 +31,18 @@ export const Info = styled.div`
 
   display: flex;
   flex-direction: column;
-  color: #fff;
+  color: ${colors.primary};
 
   span {
     font-size: 20px;
   }
 
   a {
-    color: #fff;
+    color: ${colors.primary};
     align-self: center;
 
     &:hover {
-      color: #e4bb23;
+      color: ${colors.secondary};
     }
   }
 `;
@@ -51,12 +52,32 @@ export const List = styled.div`
 
   display: flex;
   flex-direction: column;
-  /* margin-left: 20px; */
   overflow-y: auto;
   height: 30vh;
 
   &::-webkit-scrollbar {
+    width: 14px;
+    height: 18px;
+  }
+  &::-webkit-scrollbar-thumb {
+    height: 6px;
+    border: 4px solid rgba(0, 0, 0, 0);
+    background-clip: padding-box;
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    background-color: ${colors.secondary};
+    box-shadow: inset -1px -1px 0px rgba(0, 0, 0, 0.05),
+      inset 1px 1px 0px rgba(0, 0, 0, 0.05);
+    -webkit-box-shadow: inset -1px -1px 0px rgba(0, 0, 0, 0.05),
+      inset 1px 1px 0px rgba(0, 0, 0, 0.05);
+  }
+  &::-webkit-scrollbar-button {
+    width: 0;
+    height: 0;
     display: none;
+  }
+  &::-webkit-scrollbar-corner {
+    background-color: transparent;
   }
 
   button {
@@ -64,21 +85,18 @@ export const List = styled.div`
     margin-bottom: 15px;
     padding: 12px 16px;
     border-radius: 4px;
-    /* border: 2px solid #ddd; */
     border: none;
     font-size: 15px;
-    /* color: #444; */
-    color: #fff;
+    color: ${colors.primary};
     background-color: rgba(22, 22, 22, 0.8);
     transition: border-color 0.2s;
 
     &.active {
-      background-color: #e4bb23;
+      background-color: ${colors.secondary};
     }
 
     &:hover {
-      /* background-color: #e4bb23; */
-      box-shadow: inset 0 -1px 0 #e4bb23;
+      box-shadow: inset 0 -1px 0 ${colors.secondary};
       cursor: pointer;
     }
   }

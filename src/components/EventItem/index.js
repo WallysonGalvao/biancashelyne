@@ -1,5 +1,6 @@
 import React from 'react';
 import { FiMapPin, FiClock, FiGlobe } from 'react-icons/fi';
+import PropTypes from 'prop-types';
 
 import { Content, Date, InfoContainer, Info } from './styles';
 
@@ -61,3 +62,7 @@ export default function Event({ event }) {
     </Content>
   );
 }
+
+Event.propTypes = {
+  event: PropTypes.objectOf(Object).isRequired,
+};

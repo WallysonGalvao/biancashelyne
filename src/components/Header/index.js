@@ -15,6 +15,10 @@ const menus = [
     path: '/videos',
     title: 'Vídeos',
   },
+  /* {
+    path: '/galerry',
+    title: 'Galeria',
+  }, */
   {
     path: '/contact',
     title: 'Contato',

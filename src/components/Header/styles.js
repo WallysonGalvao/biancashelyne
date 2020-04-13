@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import { colors } from '~/styles/colors';
+
 export const Menu = styled.nav`
   display: flex;
 `;
@@ -24,7 +26,7 @@ export const List = styled.ul`
   li {
     margin: 0 25px;
     a {
-      color: #fff;
+      color: ${colors.primary};
       font-size: 15px;
       font-weight: bold;
       text-decoration: none;
@@ -32,13 +34,13 @@ export const List = styled.ul`
       transition: all 0.2s ease-in-out;
 
       &:hover {
-        color: #e4bb23;
-        box-shadow: inset 0 -1px 0 #e4bb23;
+        color: ${colors.secondary};
+        box-shadow: inset 0 -1px 0 ${colors.secondary};
       }
 
       &.active {
-        color: #e4bb23;
-        box-shadow: inset 0 -2px 0 #e4bb23;
+        color: ${colors.secondary};
+        box-shadow: inset 0 -2px 0 ${colors.secondary};
       }
     }
   }

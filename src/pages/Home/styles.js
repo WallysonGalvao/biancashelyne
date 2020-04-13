@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import { colors } from '~/styles/colors';
+
 export const Box = styled.div`
   width: 960px;
 
@@ -7,12 +9,17 @@ export const Box = styled.div`
   bottom: 0;
 
   h2 {
-    color: #e4bb23;
+    color: ${colors.secondary};
     font-size: 6.5em;
     font-weight: bold;
     line-height: 1.2em;
     margin: 0;
     text-transform: uppercase;
+  }
+
+  img {
+    bottom: 70%;
+    position: absolute;
   }
 
   p {
@@ -21,7 +28,7 @@ export const Box = styled.div`
     font-size: 13px;
 
     span {
-      color: #fff;
+      color: ${colors.primary};
       text-decoration: none;
       margin-right: 15px;
       text-transform: uppercase;
@@ -36,13 +43,13 @@ export const Box = styled.div`
     width: 25%;
 
     a {
-      color: #fff;
+      color: ${colors.primary};
 
       svg {
         margin-right: 8%;
 
         &:hover {
-          color: #e4bb23;
+          color: ${colors.secondary};
         }
       }
     }

@@ -4,16 +4,13 @@ import { toast } from 'react-toastify';
 import { Form } from '@unform/web';
 import * as Yup from 'yup';
 
-import Background from '~/components/Background';
-import Header from '~/components/Header';
-import Content from '~/components/Content';
 import Input from '~/components/Input';
 
 import history from '~/services/history';
 
-import image from '../../assets/violao.jpg';
+import logo from '~/assets/logo.png';
 
-import { FormContent, Title, Social, Footer } from './styles';
+import { FormContent, Title, Social } from './styles';
 
 export default function Contact() {
   const formRef = useRef(null);
@@ -48,67 +45,57 @@ export default function Contact() {
   }
 
   return (
-    <Background image={image}>
-      <Header />
-      <Content>
-        <FormContent>
-          <Title>ENTRE EM CONTATO</Title>
+    <>
+      <FormContent>
+        <Title>ENTRE EM CONTATO</Title>
 
-          <Form ref={formRef} onSubmit={handleSubmit}>
-            <Input name="name" label="Nome" />
-            <Input name="email" label="E-mail" type="email" />
-            <Input
-              name="message"
-              label="Mensagem"
-              multiline
-              rows="4"
-              cols="50"
-            />
-            <button type="submit">ENVIAR</button>
-          </Form>
-        </FormContent>
-        <Social>
-          <Title>ME ACOMPANHE NAS REDES SOCIAIS</Title>
+        <Form ref={formRef} onSubmit={handleSubmit}>
+          <Input name="name" label="Nome" />
+          <Input name="email" label="E-mail" type="email" />
+          <Input
+            name="message"
+            label="Mensagem"
+            multiline="true"
+            rows="4"
+            cols="50"
+          />
+          <button type="submit">ENVIAR</button>
+        </Form>
+      </FormContent>
+      <Social>
+        <Title>ME ACOMPANHE NAS REDES SOCIAIS</Title>
 
-          <div>
-            <a
-              href="https://www.instagram.com/biancashelyne/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FiInstagram size={50} />
-              <span>Instagram</span>
-            </a>
+        <div>
+          <a
+            href="https://www.instagram.com/biancashelyne/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FiInstagram size={50} />
+            <span>Instagram</span>
+          </a>
 
-            <a
-              href="https://www.youtube.com/channel/UCXRExMtOE-chWT0a_ILU4lQ"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FiYoutube size={50} />
-              <span>Youtube</span>
-            </a>
+          <a
+            href="https://www.youtube.com/channel/UCXRExMtOE-chWT0a_ILU4lQ"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FiYoutube size={50} />
+            <span>Youtube</span>
+          </a>
 
-            <a
-              href="https://www.facebook.com/bianca.shelyne"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FiFacebook size={50} />
-              <span>Facebbok</span>
-            </a>
-          </div>
-        </Social>
-      </Content>
-      <Footer>
-        <a
-          href="https://linkedin.com/in/wallyson-galvao"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Copyright © 2020 Desenvolvido por Wallyson Galvão
-        </a>
-      </Footer>
-    </Background>
+          <a
+            href="https://www.facebook.com/bianca.shelyne"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FiFacebook size={50} />
+            <span>Facebbok</span>
+          </a>
+        </div>
+
+        <img src={logo} alt="Binca Shelyne" />
+      </Social>
+    </>
   );
 }

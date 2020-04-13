@@ -1,8 +1,9 @@
 import styled from 'styled-components';
 import { darken } from 'polished';
+import { colors } from '~/styles/colors';
 
 export const Title = styled.h1`
-  color: #fff;
+  color: ${colors.primary};
   font-size: 25px;
   margin-bottom: 15px;
 `;
@@ -10,7 +11,7 @@ export const Title = styled.h1`
 export const FormContent = styled.div`
   width: 50%;
   padding-right: 20px;
-  color: #fff;
+  color: ${colors.primary};
 
   form {
     display: flex;
@@ -30,11 +31,9 @@ export const FormContent = styled.div`
     margin-bottom: 15px;
     padding: 12px 16px;
     border-radius: 4px;
-    /* border: 2px solid #ddd; */
     border: none;
     font-size: 15px;
-    /* color: #444; */
-    color: #fff;
+    color: ${colors.primary};
     background-color: rgba(22, 22, 22, 0.8);
     transition: border-color 0.2s;
   }
@@ -45,9 +44,8 @@ export const FormContent = styled.div`
 
   button {
     display: block;
-    /* background: #111; */
-    background: ${darken(0.2, '#e4bb23')};
-    color: #fff;
+    background: ${darken(0.2, colors.secondary)};
+    color: ${colors.primary};
     border: 0;
     cursor: pointer;
     border-radius: 4px;
@@ -59,13 +57,14 @@ export const FormContent = styled.div`
   }
 
   button:hover {
-    background-color: #e4bb23;
+    background-color: ${colors.secondary};
   }
 `;
 
 export const Social = styled.div`
   width: 50%;
-  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
 
   div {
     margin: 0 auto;
@@ -80,27 +79,12 @@ export const Social = styled.div`
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      color: #fff;
+      color: ${colors.primary};
       margin: 0 50%;
 
       &:hover {
-        color: #e4bb23;
+        color: ${colors.secondary};
       }
-    }
-  }
-`;
-
-export const Footer = styled.footer`
-  z-index: 2;
-  font-size: 15px;
-  align-self: center;
-  color: #fff;
-
-  a {
-    color: #fff;
-    &:hover {
-      color: #e4bb23;
-      text-decoration: underline;
     }
   }
 `;
