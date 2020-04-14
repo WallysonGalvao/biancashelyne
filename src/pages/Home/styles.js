@@ -26,6 +26,7 @@ export const Box = styled.div`
     display: flex;
     margin: 15px 0 30px;
     font-size: 13px;
+    width: 100%;
 
     span {
       color: ${colors.primary};
@@ -52,6 +53,24 @@ export const Box = styled.div`
           color: ${colors.secondary};
         }
       }
+    }
+  }
+
+  @media (max-width: 820px) {
+    margin-bottom: 50px;
+    width: 100%;
+    img {
+      width: 95%;
+    }
+
+    p {
+      margin: 30px 0 20px;
+    }
+
+    div {
+      width: 57%;
+      margin-left: 10px;
+      justify-content: space-between;
     }
   }
 `;

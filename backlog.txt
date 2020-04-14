@@ -1,0 +1,5 @@
+Implementar
+ - Responsatividade
+ - Envio de email
+ - Número de inscritos
+ - Notificações

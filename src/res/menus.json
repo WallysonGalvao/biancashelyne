@@ -1,0 +1,27 @@
+[
+  {
+    "path": "/",
+    "title": "Ínicio",
+    "icon": "FiHome"
+  },
+  {
+    "path": "/schedule",
+    "title": "Agenda",
+    "icon": "FiCalendar"
+  },
+  {
+    "path": "/videos",
+    "title": "Vídeos",
+    "icon": "FiVideo"
+  },
+  {
+    "path": "/gallery",
+    "title": "Galeria",
+    "icon": "FiCamera"
+  },
+  {
+    "path": "/contact",
+    "title": "Contato",
+    "icon": "FiMail"
+  }
+]

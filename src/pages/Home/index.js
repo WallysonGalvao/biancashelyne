@@ -9,8 +9,6 @@ import { Box } from './styles';
 export default function Home() {
   return (
     <Box>
-      {/*  <h2>Bianca Shelyne</h2> */}
-
       <img src={logo} alt="Binca Shelyne" />
 
       <p>

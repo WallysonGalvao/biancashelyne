@@ -1,29 +1,9 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+
 import { Menu, Box, List } from './styles';
 
-const menus = [
-  {
-    path: '/',
-    title: 'Ínicio',
-  },
-  {
-    path: '/schedule',
-    title: 'Agenda',
-  },
-  {
-    path: '/videos',
-    title: 'Vídeos',
-  },
-  {
-    path: '/gallery',
-    title: 'Galeria',
-  },
-  {
-    path: '/contact',
-    title: 'Contato',
-  },
-];
+import menus from '~/res/menus.json';
 
 export default function Header() {
   return (

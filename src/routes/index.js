@@ -1,5 +1,5 @@
 import React from 'react';
-import { Switch } from 'react-router-dom';
+import { Switch, Redirect } from 'react-router-dom';
 
 import Home from '~/pages/Home';
 import Schedule from '~/pages/Schedule';
@@ -17,6 +17,7 @@ export default function routes() {
       <Route path="/videos" exact component={Videos} />
       <Route path="/gallery" exact component={Gallery} />
       <Route path="/contact" exact component={Contact} />
+      <Redirect from="*" to="/" />;
     </Switch>
   );
 }

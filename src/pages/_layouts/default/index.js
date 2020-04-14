@@ -9,18 +9,25 @@ import Footer from '~/components/Footer';
 
 import { Wrapper } from './styles';
 
+import useWindowSize from '~/utils/useWindowSize';
+import { constants } from '~/utils/constants';
+
 import backgrounds from './images';
 
 export default function DefaultLayout({ children }) {
   const { pathname } = useLocation();
+  const size = useWindowSize();
 
   const { image } = backgrounds.find(bg => bg.path === pathname);
+
+  const isPhone = size.width < constants.SIZE;
 
   return (
     <Wrapper>
       <Background image={image}>
-        <Header />
+        {!isPhone && <Header />}
         <Content>{children}</Content>
+
         {pathname === '/contact' && <Footer />}
       </Background>
     </Wrapper>
