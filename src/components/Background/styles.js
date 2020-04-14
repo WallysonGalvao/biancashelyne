@@ -13,7 +13,7 @@ export const Container = styled.div`
   position: relative;
   width: 100%;
 
-  &:after {
+  /* &:after {
     background: linear-gradient(
       0deg,
       rgba(0, 0, 0, 0.6) 0%,
@@ -25,5 +25,5 @@ export const Container = styled.div`
     position: absolute;
     top: 0;
     width: 100%;
-  }
+  } */
 `;

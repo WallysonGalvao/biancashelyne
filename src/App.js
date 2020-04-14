@@ -3,6 +3,8 @@ import { Router } from 'react-router-dom';
 
 import GlobalStyles from './styles/global';
 
+import './styles.css';
+
 import Routes from './routes/index';
 import history from './services/history';
 

@@ -53,7 +53,7 @@ export const List = styled.div`
   display: flex;
   flex-direction: column;
   overflow-y: auto;
-  height: 30vh;
+  height: 31vh;
 
   &::-webkit-scrollbar {
     width: 14px;
