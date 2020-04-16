@@ -13,23 +13,25 @@ export default function Content({ children }) {
 
   const Container = styled.div`
     /* border: 1px solid red; */
-    z-index: 2;
+
     display: flex;
+    z-index: 2;
+    flex-direction: column;
     margin: 0 auto;
     position: relative;
     width: 960px;
-    height: 100vh;
-    padding-top: 2%;
+    height: 100%;
 
     @media (max-width: 820px) {
       width: 100%;
+      position: relative;
     }
   `;
 
   return (
     <Container>
-      {children}
       {isPhone && <Menu />}
+      {children}
     </Container>
   );
 }

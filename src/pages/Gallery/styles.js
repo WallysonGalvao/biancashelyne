@@ -4,7 +4,6 @@ import { darken } from 'polished';
 import { colors } from '~/styles/colors';
 
 export const Container = styled.div`
-  /* border: 1px solid blue; */
   width: 100%;
 
   .image-gallery-icon {

@@ -4,7 +4,6 @@ import { colors } from '~/styles/colors';
 
 export const Box = styled.div`
   width: 100%;
-
   display: flex;
   flex-direction: column;
 
@@ -16,7 +15,13 @@ export const Box = styled.div`
 
   iframe {
     align-self: center;
-    margin-right: 20px;
+    /* margin-right: 20px; */
+  }
+
+  @media (max-width: 820px) {
+    iframe {
+      width: 100%;
+    }
   }
 `;
 
@@ -24,10 +29,26 @@ export const InfoContainer = styled.div`
   display: flex;
   flex-direction: row;
   margin-top: 15px;
+
+  @media (max-width: 820px) {
+    flex-direction: column;
+
+    div:first-child {
+      display: none;
+    }
+  }
+
+  @media (min-width: 375px) {
+    div:first-child {
+      display: flex;
+    }
+  }
 `;
 
 export const Info = styled.div`
   width: 50%;
+
+  text-align: center;
 
   display: flex;
   flex-direction: column;
@@ -43,6 +64,14 @@ export const Info = styled.div`
 
     &:hover {
       color: ${colors.secondary};
+    }
+  }
+
+  @media (max-width: 820px) {
+    width: 100%;
+
+    svg {
+      width: 50%;
     }
   }
 `;
@@ -99,5 +128,13 @@ export const List = styled.div`
       box-shadow: inset 0 -1px 0 ${colors.secondary};
       cursor: pointer;
     }
+  }
+
+  @media (max-width: 820px) {
+    width: 100%;
+  }
+
+  @media (max-height: 812px) {
+    height: 20vh;
   }
 `;

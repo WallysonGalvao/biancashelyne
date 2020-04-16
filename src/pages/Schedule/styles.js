@@ -3,7 +3,8 @@ import styled from 'styled-components';
 import { colors } from '~/styles/colors';
 
 export const Event = styled.div`
-  width: 100%;
+  padding-top: 2%;
+
   color: ${colors.primary};
 
   h1 {
@@ -14,11 +15,17 @@ export const Event = styled.div`
     margin-top: 10px;
     font-size: 20px;
   }
+
+  @media (max-width: 820px) {
+    padding-top: 0;
+  }
 `;
 
 export const Container = styled.div`
   overflow-y: auto;
-  height: 79vh;
+
+  margin-top: 5px;
+  width: 100%;
 
   &::-webkit-scrollbar {
     width: 14px;

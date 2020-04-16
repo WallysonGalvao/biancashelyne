@@ -9,7 +9,11 @@ export const Content = styled.div`
 
   font-size: 16px;
 
-  margin-top: 20px;
+  color: ${colors.primary};
+
+  &:not(:first-child) {
+    margin-top: 20px;
+  }
   padding: 10px 0;
   background-color: rgba(22, 22, 22, 0.8);
   border-radius: 4px;
@@ -24,7 +28,8 @@ export const Date = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
+  text-align: center;
+  width: 10%;
   margin-left: 15px;
 
   .date {
@@ -32,13 +37,22 @@ export const Date = styled.div`
     font-weight: bold;
     color: ${colors.secondary};
   }
+
+  @media (max-width: 820px) {
+    text-align: center;
+  }
 `;
 
 export const InfoContainer = styled.div`
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   margin-left: 20px;
+
+  span:first-child {
+    color: ${colors.secondary};
+  }
 `;
 
 export const Info = styled.div`
@@ -50,6 +64,10 @@ export const Info = styled.div`
     justify-content: center;
     align-items: center;
 
+    svg {
+      margin: 0 5px;
+    }
+
     a {
       color: ${colors.primary};
       &:hover {
@@ -60,5 +78,24 @@ export const Info = styled.div`
 
   span {
     margin-left: 5px;
+  }
+
+  @media (max-width: 820px) {
+    display: flex;
+    flex-direction: column;
+
+    div {
+      justify-content: unset;
+      align-items: flex-start;
+      margin-top: 10px;
+
+      svg {
+        margin-right: 5px;
+      }
+    }
+
+    span {
+      margin: 0;
+    }
   }
 `;

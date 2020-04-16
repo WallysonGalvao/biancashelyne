@@ -28,8 +28,8 @@ export default function Videos() {
       <InfoContainer>
         <Info>
           <span>
-            Confira na lista ao lado alguns dos meus vídeos e fique a vontade
-            para assistir mais no meu canal:
+            Confira na lista alguns dos meus vídeos e fique a vontade para
+            assistir mais no meu canal:
           </span>
           <a
             href="https://www.youtube.com/channel/UCXRExMtOE-chWT0a_ILU4lQ"

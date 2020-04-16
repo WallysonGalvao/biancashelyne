@@ -5,7 +5,6 @@ import PropTypes from 'prop-types';
 import Background from '~/components/Background';
 import Content from '~/components/Content';
 import Header from '~/components/Header';
-import Footer from '~/components/Footer';
 
 import { Wrapper } from './styles';
 
@@ -27,8 +26,6 @@ export default function DefaultLayout({ children }) {
       <Background image={image}>
         {!isPhone && <Header />}
         <Content>{children}</Content>
-
-        {pathname === '/contact' && <Footer />}
       </Background>
     </Wrapper>
   );

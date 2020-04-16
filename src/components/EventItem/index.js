@@ -33,9 +33,7 @@ export default function Event({ event }) {
         <span>{`${monthString} ${year}`}</span>
       </Date>
       <InfoContainer>
-        <div>
-          <span>{name}</span>
-        </div>
+        <span>{name}</span>
 
         <Info>
           <div>
@@ -45,14 +43,14 @@ export default function Event({ event }) {
             </a>
           </div>
           <div>
-            <FiClock size={18} style={{ marginLeft: 10 }} />
+            <FiClock size={18} />
             <span>{hour}</span>
           </div>
 
           {site && (
             <div>
               <a href={site} target="_blank" rel="noopener noreferrer">
-                <FiGlobe size={18} style={{ marginLeft: 10 }} />
+                <FiGlobe size={18} />
                 <span>{name} Site</span>
               </a>
             </div>
