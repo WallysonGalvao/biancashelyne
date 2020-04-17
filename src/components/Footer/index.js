@@ -5,7 +5,6 @@ import { colors } from '~/styles/colors';
 
 export default function Footer() {
   const Container = styled.footer`
-    z-index: 2;
     font-size: 15px;
     align-self: center;
     color: ${colors.primary};

@@ -19,6 +19,7 @@ export const Container = styled.div`
 
   &:after {
     background: rgba(0, 0, 0, 0.5);
+    /* background: pink; */
     content: '';
     height: 100%;
     left: 0;

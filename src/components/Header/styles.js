@@ -7,7 +7,6 @@ export const Menu = styled.nav`
 `;
 
 export const Box = styled.div`
-  z-index: 2;
   margin: 0 auto;
   position: relative;
   width: 960px;

@@ -27,11 +27,12 @@ export const Button = styled.div`
 
   svg {
     color: ${colors.secondary};
-    z-index: 2;
+    z-index: 3;
   }
 `;
 
 export const Nav = styled.nav`
+  z-index: 2;
   display: ${props => (props.open ? 'flex' : 'none')};
   flex-direction: column;
   align-items: center;

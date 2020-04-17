@@ -15,7 +15,7 @@ export default function Content({ children }) {
     /* border: 1px solid red; */
 
     display: flex;
-    z-index: 2;
+    z-index: 1;
     flex-direction: column;
     margin: 0 auto;
     position: relative;
