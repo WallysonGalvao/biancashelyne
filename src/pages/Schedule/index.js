@@ -23,7 +23,7 @@ const events = [
     hour: '10:00am - 08:00pm',
   },
   {
-    id: 1,
+    id: 3,
     date: '11/04/2020',
     name: "Kareka's Bar",
     location: 'Norte, QND 14 Lote 09, Av. Comercial - Taguatinga',
@@ -31,7 +31,7 @@ const events = [
     hour: '10:00am - 08:00pm',
   },
   {
-    id: 2,
+    id: 4,
     date: '11/04/2020',
     name: 'Destilaria Beer',
     location: 'CSB 07, St. B Sul - Taguatinga',
@@ -40,7 +40,7 @@ const events = [
     hour: '10:00am - 08:00pm',
   },
   {
-    id: 1,
+    id: 5,
     date: '11/04/2020',
     name: "Kareka's Bar",
     location: 'Norte, QND 14 Lote 09, Av. Comercial - Taguatinga',
@@ -48,7 +48,7 @@ const events = [
     hour: '10:00am - 08:00pm',
   },
   {
-    id: 2,
+    id: 6,
     date: '11/04/2020',
     name: 'Destilaria Beer',
     location: 'CSB 07, St. B Sul - Taguatinga',
@@ -57,7 +57,7 @@ const events = [
     hour: '10:00am - 08:00pm',
   },
   {
-    id: 1,
+    id: 7,
     date: '11/04/2020',
     name: "Kareka's Bar",
     location: 'Norte, QND 14 Lote 09, Av. Comercial - Taguatinga',
@@ -65,7 +65,7 @@ const events = [
     hour: '10:00am - 08:00pm',
   },
   {
-    id: 2,
+    id: 8,
     date: '11/04/2020',
     name: 'Destilaria Beer',
     location: 'CSB 07, St. B Sul - Taguatinga',

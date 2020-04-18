@@ -17,14 +17,13 @@ export const Container = styled.div`
   position: relative;
   width: 100%;
 
-  &:after {
+  /* &:after {
     background: rgba(0, 0, 0, 0.5);
-    /* background: pink; */
     content: '';
     height: 100%;
     left: 0;
     position: absolute;
     top: 0;
     width: 100%;
-  }
+  } */
 `;

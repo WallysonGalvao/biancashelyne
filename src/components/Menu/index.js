@@ -5,22 +5,23 @@ import * as Feather from 'react-icons/fi';
 
 import menus from '~/res/menus.json';
 
-import { Container, Button, Nav, List } from './styles';
+import { Button, Nav } from './styles';
 
 export default function Menu() {
   const [open, setOpen] = useState(true);
-  const location = useLocation();
+  const { pathname } = useLocation();
 
   useEffect(() => {
     setOpen(!open);
-  }, [location]);
+  }, [pathname]);
 
-  const { FiMenu } = Feather;
+  const { FiMenu, FiX } = Feather;
 
   return (
-    <Button onClick={() => setOpen(!open)}>
-      <FiMenu size={30} />
-
+    <>
+      <Button onClick={() => setOpen(!open)}>
+        {open ? <FiX size={30} /> : <FiMenu size={30} />}
+      </Button>
       <Nav open={open}>
         <ul>
           {menus.map(({ path, title }) => (
@@ -32,21 +33,6 @@ export default function Menu() {
           ))}
         </ul>
       </Nav>
-    </Button>
+    </>
   );
-
-  if (false) {
-    return (
-      <Container>
-        {menus.map(({ path, icon }) => {
-          const { [icon]: Icon } = Feather;
-          return (
-            <NavLink exact to={path}>
-              <Icon size={30} />
-            </NavLink>
-          );
-        })}
-      </Container>
-    );
-  }
 }

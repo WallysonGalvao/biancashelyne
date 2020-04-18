@@ -2,23 +2,6 @@ import styled from 'styled-components';
 
 import { colors } from '~/styles/colors';
 
-export const Container = styled.div`
-  display: flex;
-  justify-content: space-around;
-  width: 100%;
-  position: absolute;
-  bottom: 0;
-
-  a {
-    color: ${colors.primary};
-
-    &.active {
-      color: ${colors.secondary};
-      box-shadow: inset 0 -2px 0 ${colors.secondary};
-    }
-  }
-`;
-
 export const Button = styled.div`
   width: 100%;
   display: ${props => (!props.open ? 'flex' : 'none')};
@@ -26,6 +9,7 @@ export const Button = styled.div`
   justify-content: flex-end;
 
   svg {
+    transition: height 500ms 500ms, opacity 500ms 0ms;
     color: ${colors.secondary};
     z-index: 3;
   }

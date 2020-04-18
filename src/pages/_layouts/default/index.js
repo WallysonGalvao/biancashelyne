@@ -2,11 +2,11 @@ import React from 'react';
 import { useLocation } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
-import Background from '~/components/Background';
+// import Background from '~/components/Background';
 import Content from '~/components/Content';
 import Header from '~/components/Header';
 
-import { Wrapper } from './styles';
+import { Wrapper, Background } from './styles';
 
 import useWindowSize from '~/utils/useWindowSize';
 import { constants } from '~/utils/constants';
