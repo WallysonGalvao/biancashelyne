@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { colors } from '~/styles/colors';
 
 export const Content = styled.div`
+  height: 69px;
   display: flex;
   flex-direction: row;
 
@@ -31,14 +32,33 @@ export const Date = styled.div`
   width: 10%;
   margin-left: 15px;
 
+  div {
+    span:first-child {
+      margin-right: 5px;
+    }
+  }
+
   .date {
     font-size: 25px;
     font-weight: bold;
     color: ${colors.secondary};
   }
 
-  @media (max-width: 820px) {
+  @media (max-width: 760px) {
     text-align: center;
+
+    div {
+      span:first-child {
+        margin-right: 0;
+      }
+      span:not(:first-child) {
+        display: none;
+      }
+    }
+
+    .date {
+      font-size: 16px;
+    }
   }
 `;
 
@@ -52,9 +72,16 @@ export const InfoContainer = styled.div`
   span:first-child {
     color: ${colors.secondary};
   }
+
+  @media (max-width: 760px) {
+    div {
+      display: none;
+    }
+  }
 `;
 
 export const Info = styled.div`
+  /* border: 1px solid yellow; */
   display: flex;
   flex-direction: row;
 
@@ -79,7 +106,7 @@ export const Info = styled.div`
     margin-left: 5px;
   }
 
-  @media (max-width: 820px) {
+  @media (max-width: 760px) {
     display: flex;
     flex-direction: column;
 
@@ -90,6 +117,8 @@ export const Info = styled.div`
 
       svg {
         margin-right: 5px;
+        width: 16px;
+        height: 16px;
       }
     }
 

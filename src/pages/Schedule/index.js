@@ -1,8 +1,10 @@
 import React from 'react';
 
-import EventItem from '~/components/EventItem';
+import EventNormalItem from '~/components/EventNormalItem';
+import EventSmallItem from '~/components/EventSmallItem';
 
 import { Event, Container } from './styles';
+import useWindowSize from '~/utils/useWindowSize';
 
 const events = [
   {
@@ -11,7 +13,7 @@ const events = [
     name: "Kareka's Bar",
     location: 'Norte',
     map: 'https://goo.gl/maps/rmFz6uUYRvwqZGu38',
-    hour: '10:00am - 08:00pm',
+    hour: '10:00h',
   },
   {
     id: 2,
@@ -20,7 +22,7 @@ const events = [
     location: 'CSB',
     map: 'https://g.page/destilaria-beer1?share',
     site: 'https://destilariabeer.negocio.site/?m=true',
-    hour: '10:00am - 08:00pm',
+    hour: '10:00h',
   },
   {
     id: 3,
@@ -28,7 +30,7 @@ const events = [
     name: "Kareka's Bar",
     location: 'Norte, QND 14 Lote 09, Av. Comercial - Taguatinga',
     map: 'https://goo.gl/maps/rmFz6uUYRvwqZGu38',
-    hour: '10:00am - 08:00pm',
+    hour: '10:00h',
   },
   {
     id: 4,
@@ -37,7 +39,7 @@ const events = [
     location: 'CSB 07, St. B Sul - Taguatinga',
     map: 'https://g.page/destilaria-beer1?share',
     site: 'https://destilariabeer.negocio.site/?m=true',
-    hour: '10:00am - 08:00pm',
+    hour: '10:00h',
   },
   {
     id: 5,
@@ -45,7 +47,7 @@ const events = [
     name: "Kareka's Bar",
     location: 'Norte, QND 14 Lote 09, Av. Comercial - Taguatinga',
     map: 'https://goo.gl/maps/rmFz6uUYRvwqZGu38',
-    hour: '10:00am - 08:00pm',
+    hour: '10:00h',
   },
   {
     id: 6,
@@ -54,7 +56,7 @@ const events = [
     location: 'CSB 07, St. B Sul - Taguatinga',
     map: 'https://g.page/destilaria-beer1?share',
     site: 'https://destilariabeer.negocio.site/?m=true',
-    hour: '10:00am - 08:00pm',
+    hour: '10:00h',
   },
   {
     id: 7,
@@ -62,7 +64,7 @@ const events = [
     name: "Kareka's Bar",
     location: 'Norte, QND 14 Lote 09, Av. Comercial - Taguatinga',
     map: 'https://goo.gl/maps/rmFz6uUYRvwqZGu38',
-    hour: '10:00am - 08:00pm',
+    hour: '10:00h',
   },
   {
     id: 8,
@@ -71,11 +73,12 @@ const events = [
     location: 'CSB 07, St. B Sul - Taguatinga',
     map: 'https://g.page/destilaria-beer1?share',
     site: 'https://destilariabeer.negocio.site/?m=true',
-    hour: '10:00am - 08:00pm',
+    hour: '10:00h',
   },
 ];
 
 export default function Schedule() {
+  const size = useWindowSize();
   return (
     <>
       <Event>
@@ -85,9 +88,13 @@ export default function Schedule() {
         </div>
       </Event>
       <Container>
-        {events.map(event => (
-          <EventItem key={event.id} event={event} />
-        ))}
+        {events.map(event =>
+          size.width < 760 ? (
+            <EventSmallItem key={event.id} event={event} />
+          ) : (
+            <EventNormalItem key={event.id} event={event} />
+          )
+        )}
       </Container>
     </>
   );

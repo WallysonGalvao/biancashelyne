@@ -7,7 +7,7 @@ import menus from '~/res/menus.json';
 
 export default function Header() {
   return (
-    <header>
+    <header style={{ zIndex: 2 }}>
       <Menu>
         <Box>
           <List>

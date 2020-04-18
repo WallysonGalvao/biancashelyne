@@ -3,15 +3,14 @@ import styled from 'styled-components';
 import { colors } from '~/styles/colors';
 
 export const Button = styled.div`
+  z-index: 3;
   width: 100%;
   display: ${props => (!props.open ? 'flex' : 'none')};
   align-self: baseline;
   justify-content: flex-end;
 
   svg {
-    transition: height 500ms 500ms, opacity 500ms 0ms;
     color: ${colors.secondary};
-    z-index: 3;
   }
 `;
 
